@@ -127,7 +127,7 @@ class PageDetail(object):
         self.reference_list.append(self.abstract)
         for i in range(3,6):
             self.reference_list.append(self.single_refence_list[i])
-        if config.crawl_isDownLoadLink=='1':
+        if config.crawl_isDownLoadLink==1:
             self.reference_list.append(self.download_url)
 
     def wtire_excel(self):
@@ -135,7 +135,7 @@ class PageDetail(object):
         将获得的数据写入到excel
         '''
         self.create_list()
-        if config.crawl_isDownLoadLink=='1':
+        if config.crawl_isDownLoadLink==1:
             for i in range(0,10):
                 self.sheet.write(int(self.reference_list[0]),i,self.reference_list[i],self.basic_style)
         else:
