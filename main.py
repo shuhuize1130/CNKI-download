@@ -14,7 +14,7 @@ __author__ = 'Cyrus_Ren'
 import requests
 import re
 import time, os, shutil, logging
-from UserInput import get_uesr_inpt
+from userinput import get_uesr_inpt
 from GetConfig import config
 from CrackVerifyCode import crack
 from GetPageDetail import page_detail
